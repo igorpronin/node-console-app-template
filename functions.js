@@ -10,6 +10,9 @@ const showHelp = (argsList) => {
 }
 
 const checkArgs = (args, argsList) => {
+  if (!!args._.length) {
+    throw new Error(`Non-existent argument passed: "${args._[0]}"`);
+  }
   for (let key in args) {
     if (!args.hasOwnProperty(key)) continue;
     const hasArg = argsList.some((item) => item.arg === key);
