@@ -31,8 +31,8 @@ if ('m' in argv) {
       {
         type: 'list',
         name: 'size',
-        message: 'Size preferences',
-        choices: ['Large', 'Medium', 'Small'],
+        message: 'Choose something',
+        choices: ['Want this', 'Want that', 'Want nothing'],
         filter: (val) => {
           return val.toLowerCase();
         }
